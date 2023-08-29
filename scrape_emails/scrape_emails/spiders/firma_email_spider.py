@@ -5,7 +5,7 @@ from scrapy.signalmanager import dispatcher
 import math
 
 
-class QuotesSpider(scrapy.Spider):
+class ZoznamSpider(scrapy.Spider):
     # CONFIG ITEMS
     items_per_page = 25  # you can modify items per page if needed
     first_page = 1  # you can modify if you don't want to start from the first page
@@ -25,7 +25,7 @@ class QuotesSpider(scrapy.Spider):
     start_urls = [BASE_LINK.format(1)]  # first page for scrape all page numbers
 
     def __init__(self, *args, **kwargs):
-        super(QuotesSpider, self).__init__(*args, **kwargs)
+        super(ZoznamSpider, self).__init__(*args, **kwargs)
         # Connect the spider_closed signal to the handler
         dispatcher.connect(self.handle_spider_closed, signal=signals.spider_closed)
 

@@ -4,7 +4,7 @@ from scrapy import signals
 from scrapy.signalmanager import dispatcher
 
 
-class QuotesSpider(scrapy.Spider):
+class ZlatestrankySpider(scrapy.Spider):
     # CONFIG ITEMS
     first_page = 1  # you can modify items per page if needed
     max_page = 12908  # you can modify if you don't want to load all pages MAX PAGE: 12908
@@ -23,7 +23,7 @@ class QuotesSpider(scrapy.Spider):
         start_urls.append(BASE_LINK.format(i))
 
     def __init__(self, *args, **kwargs):
-        super(QuotesSpider, self).__init__(*args, **kwargs)
+        super(ZlatestrankySpider, self).__init__(*args, **kwargs)
         # Connect the spider_closed signal to the handler
         dispatcher.connect(self.handle_spider_closed, signal=signals.spider_closed)
 
