@@ -12,7 +12,7 @@ class QuotesSpider(scrapy.Spider):
     last_page = False  # you can provide the last page if you don't want all pages
     # you have to provide the filename
     EXCEL_FILE_NAME = "output.xlsx"  # you can modify the output file
-    # you have to provide the page url
+    # you have to provide the page url, IMPORTANT! - put '{}' after '&page=' because it's a dynamic link
     BASE_LINK = "https://www.zoznam.sk/katalog/Spravodajstvo-informacie/Abecedny-zoznam-firiem/0-9/sekcia.fcgi?sid=1172&so=&page={}&desc=&shops=&kraj=&okres=&cast=&attr="
 
     # !!!!! IMPORTANT
