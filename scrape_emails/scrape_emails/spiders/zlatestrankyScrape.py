@@ -19,7 +19,7 @@ class QuotesSpider(scrapy.Spider):
     # DO NOT MODIFY THESE ITEMS
     accumulated_emails = []  # container for emails
     start_urls = []
-    for i in range(1, 15):
+    for i in range(1, max_page):
         start_urls.append(BASE_LINK.format(i))
 
     def __init__(self, *args, **kwargs):
